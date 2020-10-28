@@ -5,7 +5,7 @@ const user = {
     y : cvs.height/2-100/2,
     width : 10,
     height : 100,
-    color : "pink",
+    color : "black",
     score : 0,
 };
 const bot = {
@@ -13,17 +13,8 @@ const bot = {
     y : cvs.height/2-100/2,
     width : 10,
     height : 100,
-    color : "pink",
+    color : "black",
     score : 0,
-};
-const ball = {
-    x : cvs.width/2,
-    y : cvs.height/2,
-    radius : 10,
-    speed : 10,
-    velocityX : 10,
-    velocityY : 10,
-    color : "pink",
 };
 
 const net = {
@@ -31,8 +22,24 @@ const net = {
     y : 0,
     width : 2,
     height : 10,
-    color : "pink",
+    color : "gray",
 };
+function drawNet(){
+    for (let i = 0; i <= cvs.height;i+=15){
+        drawRect(net.x,net.y + i,net.width,net.height,net.color);
+    }
+}
+
+const ball = {
+    x : cvs.width/2,
+    y : cvs.height/2,
+    radius : 10,
+    speed : 10,
+    velocityX : 10,
+    velocityY : 10,
+    strokeStyle : "orange",
+};
+
 function drawRect(x,y,width,height,color){
     ctx.fillStyle = color;
     ctx.fillRect(x,y,width,height);
@@ -42,25 +49,21 @@ function drawCircle(x,y,radius,color){
     ctx.beginPath();
     ctx.arc(x,y,radius,0,Math.PI*2,false);
     ctx.closePath();
-    ctx.fill();
+    ctx.stroke();
 }
 function drawText(text,x,y,color){
-    ctx.fillStyle = color;
-    ctx.font = "45px family";
+    ctx.strokeStyle = color;
+    ctx.font = "75px fantasy";
     ctx.fillText(text,x,y);
 }
-function drawNet(){
-    for (let i = 0; i <= cvs.height;i+=15){
-        drawRect(net.x,net.y + i,net.width,net.height,net.color);
-    }
-}
+
 function render(){
-    drawRect(0,0,cvs.width,cvs.height, "black");
+    drawRect(0,0,cvs.width,cvs.height, "pink");
 
     drawNet();
 
-    drawText(user.score, cvs.width/4, cvs.height/5, "pink");
-    drawText(bot.score, 3*cvs.width/4, cvs.height/5, "pink");
+    drawText(user.score, cvs.width/4, cvs.height/5, "black");
+    drawText(bot.score, 3*cvs.width/4, cvs.height/5, "black");
 
     drawRect(user.x,user.y,user.width,user.height,user.color);
     drawRect(bot.x,bot.y,bot.width,bot.height,bot.color);
@@ -85,29 +88,24 @@ function collision(b,p){
 
     return b.right > p.left && b.bottom > p.top && b.left < p.right && b.top < p.bottom;
 }
-function resetBall(){
-    ball.x = cvs.width/2;
-    ball.y = cvs.height/2;
-    ball.speed = 10;
-    ball.velocityX = -ball.velocityX;
-}
+
 function update(){
     ball.x += ball.velocityX;
     ball.y += ball.velocityY;
 
     let botlevel = 0.1;
     bot.y += (ball.y - ( bot.y + bot.height/2))*botlevel;
-    if (ball.y + ball.radius > cvs.height || ball.y - ball.radius < 0 ){
+    if (ball.y + ball.radius > cvs.height - ball.radius || ball.y - ball.radius < 0 ){
         ball.velocityY = -ball.velocityY;
     }
     let player = (ball.x < cvs.width/2) ? user : bot;
     if (collision(ball,player)){
         let collidePoint = ball.y - (player.y + player.height/2);
         collidePoint =collidePoint/(player.height/2);
-        let angleRadius = collidePoint*Math.PI/4;
+        let angleRad = (Math.PI/4)*collidePoint;
         let direction = (ball.x < cvs.width/2) ? 1 : -1;
-        ball.velocityX = direction*ball.speed*Math.cos(angleRadius);
-        ball.velocityY = ball.speed*Math.sin(angleRadius);
+        ball.velocityX = direction*ball.speed*Math.cos(angleRad);
+        ball.velocityY = ball.speed*Math.sin(angleRad);
 
         ball.speed += 0.1;
     }
@@ -119,9 +117,31 @@ function update(){
         resetBall();
     }
 }
+function resetBall(){
+    ball.x = cvs.width/2;
+    ball.y = cvs.height/2;
+    ball.speed = 10;
+    ball.velocityX = -ball.velocityX;
+}
+
+function checkWin() {
+    if (user.score === 5){
+        alert(" Đố mày thắng lần nữa đấy ! ");
+        document.location.reload();
+    }
+}
+function checkLose() {
+    if (bot.score === 5){
+        alert (" Xin cái tuổi bạn nhé ! ");
+        document.location.reload();
+    }
+}
+
 function game(){
     update();
     render();
+    checkWin();
+    checkLose();
 }
-const framePerSecond = 50;
+const framePerSecond = 60;
 setInterval(game, 1000/framePerSecond);
