@@ -21,8 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3c439813-cdc9-4009-8a20-59ac3f9a5687" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TableTennisGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/TableTennisGame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TableTennisGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/TableTennisGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bird.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nenchinh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ongduoi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ongtren.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blaelb/Case-Study/index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,6 +62,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="1.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/1.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,7 +84,9 @@
       <workItem from="1603781241757" duration="9105000" />
       <workItem from="1603847849890" duration="10589000" />
       <workItem from="1603867901657" duration="4305000" />
-      <workItem from="1603895043699" duration="11997000" />
+      <workItem from="1603895043699" duration="12323000" />
+      <workItem from="1603934413493" duration="2899000" />
+      <workItem from="1603947707844" duration="3068000" />
     </task>
     <servers />
   </component>
@@ -95,10 +106,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603953039171">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1603953039171" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603954221094">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603954221094" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603869218222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603869218222" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1603938283047">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603938283047" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1603938283047">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603938283047" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1603938283047">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603938283047" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1603938283047">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603938283047" />
     <state x="0" y="0" width="1016" height="715" maximized="true" key="dock-window-1" timestamp="1603643506049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
